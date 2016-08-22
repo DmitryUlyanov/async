@@ -726,7 +726,7 @@ static void luv_on_read(uv_stream_t* handle, ssize_t nread, uv_buf_t buf) {
       fprintf(stderr, "TODO: Implement async error handling\n");
       assert(0);
     } else {
-      fprintf(stderr,"%d", err.code)
+      fprintf(stderr,"%d", err.code);
       // Handling errors
       if (luv_get_callback(L, "onerr")) {
         lua_pushnumber(L, err.code);
